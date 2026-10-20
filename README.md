@@ -1,14 +1,14 @@
-# ACME Data Modeling Portfolio
+# ACME Data Modeling
 
-**Charan Konduri** — completed coursework from the Udacity *Data Engineering with AWS* nanodegree (**Data Modeling Across a Company Lifecycle**). Submitted and passed in the Udacity Workspace; this repo is a **local, runnable portfolio rebuild** of that same solution.
+**Charan Konduri** — a standalone data modeling portfolio project exploring how an e-commerce company evolves its data foundations across relational, document, and graph stores.
 
-ACME Corporation is a **fictional** e-commerce case study used for education. Nothing here is a real company deployment.
+ACME Corporation is a fictional wholesaler that sells large and small gear online. This repo designs and demonstrates the models that support that lifecycle.
 
 ---
 
 ## Project story
 
-ACME sells large and small gear to wholesale customers online. As a data modeler, the brief is to lay foundations across three stages of the company lifecycle:
+As ACME grows, the data platform shifts with the business:
 
 | Part | Store | Role |
 |------|--------|------|
@@ -25,7 +25,7 @@ ACME sells large and small gear to wholesale customers online. As a data modeler
 - **MongoDB** (PyMongo)
 - **Neo4j** (official Python driver + Cypher)
 - **Docker Compose** for local Postgres, MongoDB, and Neo4j
-- **Optional:** OpenAI-compatible API via Vocareum (`utils/graphrag_chatbot.py`)
+- **Optional:** OpenAI-compatible API for GraphRAG (`utils/graphrag_chatbot.py`)
 
 ---
 
@@ -50,10 +50,19 @@ Database: `acme_3d_printing`. Collections: `customers`, `products`, `purchases`.
 ### Part 3 — Neo4j (recommendations)
 
 - **Nodes:** `Customer`, `Product`, `Industry`
-- **Relationships:** `PURCHASED`, `ALSO_BOUGHT`, plus standouts `WORKS_IN` and `SERVES`
+- **Relationships:** `PURCHASED`, `ALSO_BOUGHT`, plus `WORKS_IN` and `SERVES`
 - **Queries:** precomputed also-bought path, dynamic co-purchase traversal, industry popularity, product similarity
 
-**Optional GraphRAG:** embed products into a Neo4j vector index, retrieve by similarity, answer with customer/industry context via Vocareum-routed OpenAI. Helper: [`utils/graphrag_chatbot.py`](utils/graphrag_chatbot.py). API key from `VOCAREUM_API_KEY` only — never hardcoded.
+**Optional GraphRAG:** embed products into a Neo4j vector index, retrieve by similarity, and answer with customer/industry context. Helper: [`utils/graphrag_chatbot.py`](utils/graphrag_chatbot.py). API key from `VOCAREUM_API_KEY` (or compatible OpenAI key via `.env`) — never hardcoded.
+
+---
+
+## Skills demonstrated
+
+- **Relational:** 3NF DDL with PKs/FKs, typed columns, CHECKs/UNIQUEs, CSV load with purchase unpivot
+- **Document:** embedding vs referencing trade-offs, polymorphic product attributes, filtered PyMongo queries
+- **Graph:** recommendation traversals (`PURCHASED` / `ALSO_BOUGHT`), industry and similarity queries
+- **Optional:** GraphRAG + vector search over product nodes
 
 ---
 
@@ -67,7 +76,7 @@ acme-data-modeling/
 ├── .gitignore
 ├── requirements.txt
 ├── docker-compose.yml
-├── data/                          # 7 course CSVs
+├── data/                          # sample CSVs
 ├── notebooks/
 │   └── ACME_Data_Modeling_Project.ipynb
 ├── sql/
@@ -86,7 +95,7 @@ acme-data-modeling/
 docker compose up -d
 ```
 
-Defaults (aligned with the course notebook):
+Defaults:
 
 | Service | Connection |
 |---------|------------|
@@ -114,31 +123,13 @@ Run top to bottom. CSV paths resolve whether the kernel cwd is the repo root or 
 
 ```bash
 cp .env.example .env
-# set VOCAREUM_API_KEY=... in .env (Vocareum key from the Udacity program)
+# set VOCAREUM_API_KEY=... in .env
 ```
 
 Base URL used by the helper: `https://openai.vocareum.com/v1`. Parts 1–3 do **not** require this key.
 
 ---
 
-## Rubric-aligned skills demonstrated
-
-- **Relational:** 3NF DDL with PKs/FKs, typed columns, CHECKs/UNIQUEs, CSV load with purchase unpivot
-- **Document:** embedding vs referencing trade-offs, polymorphic product attributes, filtered PyMongo queries
-- **Graph:** recommendation traversals (`PURCHASED` / `ALSO_BOUGHT`), industry and similarity standouts
-- **Optional:** GraphRAG + vector search over product nodes
-
----
-
-## Disclaimer
-
-- ACME and all sample customers/products are **fictional educational** materials from the Udacity nanodegree.
-- This portfolio rebuild mirrors the **author’s submitted and passed** notebook logic for local demonstration.
-- Graded submission originally ran against pre-configured Workspace containers; Docker Compose here replaces that environment for GitHub viewers.
-- No AI tools are listed as co-authors of this coursework.
-
----
-
 ## License
 
-MIT — see [`LICENSE`](LICENSE). Course sample data remains subject to Udacity’s terms.
+MIT — see [`LICENSE`](LICENSE).
