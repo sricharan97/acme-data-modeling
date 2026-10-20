@@ -1,0 +1,3 @@
+product_id,product_name,product_type,description,price,stock_quantity,created_at
+1,Industrial Large Gear,large_gear,Heavy-duty large gear for industrial applications,450.00,50,2024-01-01 08:00:00
+2,Precision Small Gear,small_gear,Precision small gear for detailed work,75.00,200,2024-01-01 08:00:00

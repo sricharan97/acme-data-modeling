@@ -1,0 +1,17 @@
+email_id,customer_id,email,created_at
+1,1,alice@wonderland.fake,2024-01-15 10:30:00
+2,1,alice.curious@example.test,2024-01-15 10:31:00
+3,2,bob@martinez.fake,2024-01-16 11:45:00
+4,3,charlie@chocolate-factory.test,2024-01-17 09:20:00
+5,4,dorothy@oz-land.fake,2024-01-18 14:15:00
+8,6,frodo@shire-mail.test,2024-01-20 08:45:00
+9,7,gandalf@wizards.fake,2024-01-21 13:20:00
+10,8,hermione@hogwarts.test,2024-01-22 10:10:00
+11,9,indiana@archaeology.fake,2024-01-23 15:30:00
+12,10,bond007@spy.fake,2024-01-24 09:45:00
+14,12,luke@rebels.fake,2024-01-26 14:50:00
+15,14,neo@matrix.fake,2024-01-28 10:30:00
+16,15,oliver@workhouse.test,2024-01-29 13:45:00
+17,16,poseiden@sea.fake,2024-01-30 09:20:00
+19,18,robin@sherwood.fake,2024-02-01 11:30:00
+20,19,sherlock@bakerstreet.test,2024-02-02 14:20:00

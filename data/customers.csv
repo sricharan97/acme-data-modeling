@@ -1,0 +1,16 @@
+customer_id,first_name,last_name,created_at
+1,Alice,Wonderland,2024-01-15 10:30:00
+2,Bob,Martinez,2024-01-16 11:45:00
+3,Charlie,Chocolate,2024-01-17 09:20:00
+4,Dorothy,Gale,2024-01-18 14:15:00
+6,Frodo,Baggins,2024-01-20 08:45:00
+7,Gandalf,Grey,2024-01-21 13:20:00
+8,Hermione,Granger,2024-01-22 10:10:00
+9,Indiana,Jones,2024-01-23 15:30:00
+10,James,Bond,2024-01-24 09:45:00
+12,Luke,Skywalker,2024-01-26 14:50:00
+14,Neo,Anderson,2024-01-28 10:30:00
+15,Oliver,Twist,2024-01-29 13:45:00
+16,Peter,Pan,2024-01-30 09:20:00
+18,Robin,Hood,2024-02-01 11:30:00
+19,Sherlock,Holmes,2024-02-02 14:20:00
