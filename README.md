@@ -1,6 +1,6 @@
 # ACME Data Modeling
 
-**Charan Konduri** — a standalone data modeling portfolio project exploring how an e-commerce company evolves its data foundations across relational, document, and graph stores.
+A standalone data modeling portfolio project exploring how an e-commerce company evolves its data foundations across relational, document, and graph stores.
 
 ACME Corporation is a fictional wholesaler that sells large and small gear online. This repo designs and demonstrates the models that support that lifecycle.
 
